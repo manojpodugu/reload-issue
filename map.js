@@ -26,14 +26,14 @@ const predefinedPaths = {
 
 // Get values from URL or localStorage
 const urlParams = new URLSearchParams(window.location.search);
-let source = urlParams.get("source") || localStorage.getItem("source");
-let destination = urlParams.get("destination") || localStorage.getItem("destination");
+/*let*/const source = /*urlParams.get("source") || */localStorage.getItem("source");
+/*let*/const destination = /* urlParams.get("destination") ||*/ localStorage.getItem("destination");
 
 // If source/destination are missing, redirect back
-if (!source || !destination) {
+/*if (!source || !destination) {
     alert("No route selected! Please go back and choose locations.");
     window.location.href = "index.html";
-} else {
+} else {*/
     const canvas = document.getElementById("mapCanvas");
     const mapImage = document.getElementById("mapImage");
 
@@ -42,7 +42,7 @@ if (!source || !destination) {
         canvas.height = mapImage.clientHeight;
         drawRoute(source, destination);
     };
-}
+//}
 
 // Get correct path
 function getPath(source, destination) {
