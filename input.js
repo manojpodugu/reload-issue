@@ -7,5 +7,5 @@ function navigate() {
     localStorage.setItem("destination", destination);
 
     // Redirect to map page
-    window.location.href = "map.html";
+    window.location.href = /*"map.html";*/`map.html?source=${source}&destination=${destination}`;
 }
