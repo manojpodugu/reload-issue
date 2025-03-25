@@ -2,17 +2,15 @@
 const predefinedPaths = {
     "Entrance-Office": [
         { x: 926, y: 322 },  // Entrance
-       // { x: 300, y: 180 },  // 🔴 Fake location (Hidden waypoint)
         { x: 733, y: 323 },  // 🔴 Fake location (Hidden waypoint)
         { x: 730, y: 377 }   // Office
     ],
-  /*  "Entrance-Classroom": [
-        { x: 200, y: 150 },  // 📍 Entrance
-        { x: 400, y: 200 },  // 🔴 Fake location (Hidden waypoint)
-        { x: 600, y: 220 },  // 🔴 Fake location (Hidden waypoint)
-        { x: 850, y: 250 }   // 📍 Classroom
+ "Entrance-Classroom": [
+        { x: 926, y: 322 },  // 📍 Entrance
+        { x: 733, y: 323 },  // 🔴 Fake location (Hidden waypoint)
+        { x: 728, y: 270 }   // 📍 Classroom
     ],
-    "Office-Canteen": [
+    /*   "Office-Canteen": [
         { x: 700, y: 300 },  // 📍 Office
         { x: 600, y: 350 },  // 🔴 Fake location (Hidden waypoint)
         { x: 500, y: 450 }   // 📍 Canteen
@@ -26,8 +24,8 @@ const predefinedPaths = {
 
 // Get values from URL or localStorage
 const urlParams = new URLSearchParams(window.location.search);
-/*let*/const source = /*urlParams.get("source") || */localStorage.getItem("source");
-/*let*/const destination = /* urlParams.get("destination") ||*/ localStorage.getItem("destination");
+/*let*/const source = urlParams.get("source") || localStorage.getItem("source");
+/*let*/const destination =  urlParams.get("destination") || localStorage.getItem("destination");
 
 // If source/destination are missing, redirect back
 /*if (!source || !destination) {
